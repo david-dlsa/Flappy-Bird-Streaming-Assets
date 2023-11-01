@@ -217,7 +217,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1384828452}
   - {fileID: 949571901}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -353,6 +352,7 @@ MonoBehaviour:
   pipe: {fileID: 8383842899535992650, guid: 2943e1c0900b05141a7c945cdf5bd4f8, type: 3}
   height: 1.5
   delayBetweenPipes: 2
+  spriteManager: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 77610697}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &949571902
 MonoBehaviour:
@@ -611,11 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bca019bb50aea4eb708c0f0d2725c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderersToUpdate:
-  - spriteRenderer: {fileID: 1627629229}
-    spriteName: World_Day_BackGround.png
-  - spriteRenderer: {fileID: 1722999031}
-    spriteName: World_Ground.png
+  objectSpriteMappings: []
 --- !u!1 &1069532523
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,50 +685,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1384828451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1384828452}
-  - component: {fileID: 1384828453}
-  m_Layer: 0
-  m_Name: AssetLoaderManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1384828452
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384828451}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31030026, y: 0.09260017, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 77610697}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1384828453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384828451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4ab9985526ee84188b7c000f51cab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1431535284
 GameObject:
   m_ObjectHideFlags: 0

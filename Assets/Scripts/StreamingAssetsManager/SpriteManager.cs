@@ -4,41 +4,76 @@ using System.IO;
 using UnityEngine;
 
 [Serializable]
-public class GameObjectSpriteMapping
+public class ObjectSpriteMapping
 {
-    public SpriteRenderer spriteRenderer;
+    public string tag;
     public string spriteName;
 }
 
 public class SpriteManager : MonoBehaviour
 {
-    public List<GameObjectSpriteMapping> spriteRenderersToUpdate = new List<GameObjectSpriteMapping>();
+    public List<ObjectSpriteMapping> objectSpriteMappings = new List<ObjectSpriteMapping>();
 
     private void Start()
     {
-        LoadSprites();
+        // Encontre e atualize os sprites para objetos com as tags especificadas na configuração
+        foreach (var mapping in objectSpriteMappings)
+        {
+            GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(mapping.tag);
+            foreach (var obj in objectsWithTag)
+            {
+                ChangeSprite(obj, mapping.spriteName);
+            }
+        }
     }
 
-    public void LoadSprites()
+    public void ChangeSprite(GameObject obj, string spriteName)
     {
-        foreach (var mapping in spriteRenderersToUpdate)
+        // Carrega o sprite da pasta local
+        Texture2D texture = LoadTexture(spriteName);
+
+        if (texture != null)
         {
-            string spriteName = mapping.spriteName;
+            Sprite newSprite = Sprite.Create(
+                texture,
+                new Rect(0, 0, texture.width, texture.height),
+                new Vector2(0.5f, 0.5f)
+            );
 
-            // Carrega o sprite da pasta local
-            Texture2D texture = LoadTexture(spriteName);
+            // Atualiza o sprite no objeto
+            SetObjectSprite(obj, newSprite);
+        }
+    }
 
-            if (texture != null)
-            {
-                Sprite newSprite = Sprite.Create(
-                    texture,
-                    new Rect(0, 0, texture.width, texture.height),
-                    new Vector2(0.5f, 0.5f)
-                );
+    private void SetObjectSprite(GameObject obj, Sprite newSprite)
+    {
+        List<SpriteRenderer> spriteRenderers = FindSpriteRenderersRecursively(obj);
 
-                // Atualiza o SpriteRenderer com o novo sprite
-                mapping.spriteRenderer.sprite = newSprite;
-            }
+        foreach (var spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.sprite = newSprite;
+        }
+    }
+
+    private List<SpriteRenderer> FindSpriteRenderersRecursively(GameObject obj)
+    {
+        List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
+        FindSpriteRenderersRecursively(obj.transform, spriteRenderers);
+        return spriteRenderers;
+    }
+
+    private void FindSpriteRenderersRecursively(Transform obj, List<SpriteRenderer> spriteRenderers)
+    {
+        var spriteRenderer = obj.GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderers.Add(spriteRenderer);
+        }
+
+        foreach (Transform child in obj)
+        {
+            FindSpriteRenderersRecursively(child, spriteRenderers);
         }
     }
 
