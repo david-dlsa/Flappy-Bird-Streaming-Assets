@@ -16,16 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 1cc32cc022691b04f892caee080a7243
-  m_SerializeEntries:
-  - m_GUID: 9b834bc7a757492418945d58e496d305
-    m_Address: Assets/GUI PRO Kit - Casual Game
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: fb997a6fc80b1490ca7e7efc5e4b7822
-    m_Address: Assets/GUI PRO Kit - Casual Game/Preview
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - SpecialSprites
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f58cd0ed210ad9a4f8e00231cfc96db2, type: 2}
   m_SchemaSet:
