@@ -12,11 +12,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // Libera tempo do jogo
         Time.timeScale = 1f;
     }
 
     public void RestartGame()
     {
+        //Carrega a cena do jogo
         SceneManager.LoadScene(0);
     }
 }

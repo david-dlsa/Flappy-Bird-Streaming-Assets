@@ -8,12 +8,12 @@ public class Points : MonoBehaviour
 
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManager>();
+        gameManager = FindAnyObjectByType<GameManager>(); // Obtém a referência ao objeto com componente GameManager
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.score++;
-        gameManager.scoreText.text = gameManager.score.ToString();
+        gameManager.score++; // Incrementa a pontuação ao triggar colisão
+        gameManager.scoreText.text = gameManager.score.ToString(); // Atribui ao objeto de texto a pontuação numérica convertida em texto
     }
 }

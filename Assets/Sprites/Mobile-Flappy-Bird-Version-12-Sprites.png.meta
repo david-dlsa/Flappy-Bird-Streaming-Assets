@@ -260,7 +260,7 @@ TextureImporter:
         width: 97
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,6 +268,69 @@ TextureImporter:
       bones: []
       spriteID: ace631b442e0f0040906fae7e78b8400
       internalID: -893448744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile-Flappy-Bird-Version-12-Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 171
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a3d64ea0e2dd84693ea5e946e2750c
+      internalID: -80116702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile-Flappy-Bird-Version-12-Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 145
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04a6d69e77de5144b338b96d301c500
+      internalID: 1498274548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile-Flappy-Bird-Version-12-Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 9
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd2cfe98230486469db3a05c04d82a6
+      internalID: 441791289
       vertices: []
       indices: 
       edges: []
@@ -288,9 +351,12 @@ TextureImporter:
       Mobile-Flappy-Bird-Version-12-Sprites_5: 11835225
       Mobile-Flappy-Bird-Version-12-Sprites_3: 1477932402
       Mobile-Flappy-Bird-Version-12-Sprites_7: -893448744
+      Mobile-Flappy-Bird-Version-12-Sprites_10: 441791289
       Mobile-Flappy-Bird-Version-12-Sprites_1: -1799875662
+      Mobile-Flappy-Bird-Version-12-Sprites_9: 1498274548
       Mobile-Flappy-Bird-Version-12-Sprites_6: -1211943741
       Mobile-Flappy-Bird-Version-12-Sprites_0: 2125699629
+      Mobile-Flappy-Bird-Version-12-Sprites_8: -80116702
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

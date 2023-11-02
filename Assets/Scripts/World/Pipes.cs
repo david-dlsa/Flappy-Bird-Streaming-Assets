@@ -9,6 +9,7 @@ public class Pipes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Incrementa a posição horizontal dos canos
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }
